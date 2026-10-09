@@ -1,0 +1,21 @@
+{
+  "name": "mechamaster",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "test:smoke": "node scripts/smoke.cjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "model": "python3 scripts/textures.py && blender -b -t 5 --python scripts/build_mech.py",
+    "render": "blender -b artifacts/nomad-mk07.blend -t 5 --python scripts/render_mech.py"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1",
+    "vite": "7.1.9"
+  }
+}

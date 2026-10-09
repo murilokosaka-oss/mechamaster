@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111514" />
+    <meta name="description" content="NOMAD MK.07 — an original expedition mech. Explore layered armor, machined joints and physically based materials in real time." />
+    <title>NOMAD MK.07 — Mechamaster</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111514'/%3E%3Cpath d='M16 46V18h8l8 15 8-15h8v28h-8V32l-8 14-8-14v14z' fill='%23d69a57'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="/" aria-label="Mechamaster home"><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M3 27V7h6l8 12 8-12h6v20h-6V17l-8 12-8-12v10z"/></svg><span>MECHAMASTER<span class="brand-sub">INDEPENDENT MACHINE WORKS</span></span></a>
+      <nav class="tabs" aria-label="Viewer panels"><button class="tab active" data-tab="overview">Overview</button><button class="tab" data-tab="materials">Material lab</button><button class="tab" data-tab="specs">Blueprint</button></nav>
+      <a class="download" href="/models/nomad-mk07.glb" download>Get the model <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 13v4h12v-4"/></svg></a>
+    </header>
+    <main>
+      <div id="viewport" aria-label="Interactive 3D model of the NOMAD expedition mech" role="img"></div>
+      <div class="scene-vignette"></div>
+      <div class="watermark" aria-hidden="true">NOMAD</div>
+      <aside class="intro">
+        <div class="eyebrow"><span class="tiny-line"></span>EXPEDITION SERIES / 007</div>
+        <h1>NOMAD<span>MK.07</span></h1>
+        <p class="lede">Built for the<br/>worlds beyond ours.</p>
+        <p class="description">A heavy expedition chassis. Layered ceramic armor. Exposed mechanics. Every surface tells a story.</p>
+        <div class="intro-divider"></div>
+        <div class="edition"><span class="status-dot"></span> ORIGINAL 3D STUDY <span>01 / 01</span></div>
+        <div class="material-swatches" aria-label="Model materials"><span style="--swatch:#9ea694" title="Weathered ceramic green"></span><span style="--swatch:#cf701b" title="Expedition ochre"></span><span style="--swatch:#333b3b" title="Graphite titanium"></span><span style="--swatch:#adb5b8" title="Brushed actuator steel"></span><span class="swatch-label">FIELD FINISH</span></div>
+      </aside>
+      <button id="panel-toggle" aria-expanded="false" aria-controls="inspector"><span id="mobile-panel-label">Scene controls</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/><circle cx="7" cy="5" r="2"/><circle cx="13" cy="10" r="2"/><circle cx="8" cy="15" r="2"/></svg></button>
+      <section class="inspector" id="inspector" aria-label="Model controls">
+        <div class="panel-title"><span id="panel-title">SCENE CONTROLS</span><span class="panel-index">/ 01</span></div>
+        <div id="overview-panel" class="control-panel">
+          <label class="field-label" for="lighting">Light environment</label>
+          <div class="segmented" id="lighting"><button data-light="studio" class="selected">Studio</button><button data-light="hangar">Hangar</button><button data-light="dusk">Dusk</button></div>
+          <label class="range-label" for="explode">Exploded assembly <output id="explode-value">0%</output></label>
+          <input id="explode" type="range" min="0" max="100" value="0" />
+          <p class="control-note">Separate the chassis to reveal its construction.</p>
+          <div class="view-row"><span>CAMERA</span><button data-camera="hero" class="selected" title="Three quarter view">¾</button><button data-camera="front" title="Front view">F</button><button data-camera="rear" title="Rear view">R</button><button data-camera="detail" title="Optical module detail">+</button></div>
+        </div>
+        <div id="materials-panel" class="control-panel" hidden>
+          <label class="field-label" for="finish">Armor finish</label>
+          <div class="finish-options" id="finish"><button data-finish="field" class="selected" style="--color:#9ea694" aria-label="Field green"></button><button data-finish="arctic" style="--color:#d5dcde" aria-label="Arctic white"></button><button data-finish="desert" style="--color:#b7a07b" aria-label="Desert sand"></button><button data-finish="stealth" style="--color:#4c565b" aria-label="Stealth graphite"></button><span id="finish-label">Field green</span></div>
+          <label class="range-label" for="roughness">Surface roughness <output id="roughness-value">100%</output></label>
+          <input id="roughness" type="range" min="15" max="100" value="100" />
+          <label class="range-label" for="exposure">Exposure <output id="exposure-value">1.0</output></label>
+          <input id="exposure" type="range" min="40" max="170" value="100" />
+          <p class="control-note">Color, normal, roughness & metalness maps. Machined edges use a separate steel material.</p>
+        </div>
+        <div id="specs-panel" class="control-panel" hidden>
+          <dl class="specs"><div><dt>Overall height</dt><dd>8.1 m</dd></div><div><dt>Modeled parts</dt><dd id="mesh-count">477</dd></div><div><dt>Triangles</dt><dd id="triangle-count">148,992</dd></div><div><dt>PBR materials</dt><dd>10</dd></div><div><dt>Assemblies</dt><dd>09</dd></div><div><dt>Asset format</dt><dd>GLB / Blender</dd></div></dl>
+          <p class="control-note">Original geometry. Fully textured. Made to be explored, adapted, and rendered.</p>
+        </div>
+        <div class="panel-foot"><span class="live-dot"></span><span id="render-status">INITIALIZING</span><span>PBR</span></div>
+      </section>
+      <div class="annotation annotation-top"><span class="crosshair">+</span><span>OPTICAL COMMAND MODULE<span>AMBER MULTISPECTRAL ARRAY</span></span></div>
+      <div class="annotation annotation-bottom"><span class="crosshair">+</span><span>ARTICULATED LOWER CHASSIS<span>DUAL HYDRAULIC ACTUATION</span></span></div>
+      <div class="loading" id="loading"><div class="loader-ring"></div><span>ASSEMBLING NOMAD</span><small id="load-progress">Loading model & textures</small></div>
+      <div class="toolbar"><div class="mode-buttons"><button id="solid" class="selected" title="Textured view"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 7 4v8l-7 4-7-4V6zM3 6l7 4 7-4M10 10v8"/></svg>Textured</button><button id="wireframe" title="Wireframe view"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m10 2 7 4v8l-7 4-7-4V6zM3 6l7 4 7-4M10 2v16M3 14l14-8M3 6l14 8"/></svg>Wireframe</button></div><span class="toolbar-separator"></span><button id="rotate" aria-pressed="false" title="Toggle turntable"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 6a6 6 0 1 0 1 7M15 2v4h-4"/></svg>Turntable</button><button id="reset" title="Reset all controls"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 6a7 7 0 1 1-1 6M4 2v4h4"/></svg><span class="sr-only">Reset view</span></button><button id="capture" title="Save a PNG screenshot"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h4l1-2h4l1 2h4v10H3z"/><circle cx="10" cy="11" r="3"/></svg><span class="sr-only">Save screenshot</span></button></div>
+      <div class="orbit-hint"><svg viewBox="0 0 20 24" aria-hidden="true"><rect x="4" y="2" width="12" height="20" rx="6"/><path d="M10 2v7"/></svg><span>Drag to orbit<span>Scroll to explore</span></span></div>
+      <div class="axis" aria-hidden="true"><span class="axis-y">Y</span><span class="axis-x">X</span><span class="axis-z">Z</span><svg viewBox="0 0 60 60"><path d="M30 35V9M30 35l22 12M30 35 8 47"/></svg></div>
+    </main>
+    <footer><span>DESIGNED TO GO FURTHER.</span><span class="footer-middle">NOMAD MK.07 <span>/</span> DIGITAL PROTOTYPE</span><span><span class="status-dot"></span>REAL-TIME 3D</span></footer>
+    <div id="toast" role="status"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

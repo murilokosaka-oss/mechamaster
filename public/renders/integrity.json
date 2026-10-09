@@ -1,0 +1,30 @@
+{
+  "images": [
+    {
+      "file": "nomad-hero.png",
+      "bytes": 3000241,
+      "sha256": "b72262bc1763cfeec1b4dadba71350c2d44e56e8ef2be4d21b59dd1e83b2e67b"
+    },
+    {
+      "file": "viewer-desktop.png",
+      "bytes": 701075,
+      "sha256": "9e11cbec3b10c6d21a4e82930130bf780093d1809904757406fc21d8805a103e"
+    },
+    {
+      "file": "viewer-detail.png",
+      "bytes": 982427,
+      "sha256": "45dd82480a1ad2531cd4efc2ddeccb730e9f6e478e473a97f19368ffa07d2aa4"
+    },
+    {
+      "file": "viewer-exploded.png",
+      "bytes": 741242,
+      "sha256": "a11e55bac22e80217ed868f1c6314e903e70e64256584c6dcdc96971e23d46fb"
+    },
+    {
+      "file": "viewer-mobile.png",
+      "bytes": 225417,
+      "sha256": "dc79202cf9a1d48d88475c6a1aee976300285cb8084a9d1bfe2ce35f507f9ad6"
+    }
+  ],
+  "original_bytes_preserved": true
+}

@@ -1,0 +1,18 @@
+{
+  "name": "NOMAD MK.07",
+  "height_m": 8.1,
+  "mesh_count": 477,
+  "triangles": 148992,
+  "materials": 10,
+  "assemblies": [
+    "Leg \u00b7 port",
+    "Leg \u00b7 starboard",
+    "Pelvis & spinal articulation",
+    "Torso \u00b7 monocoque armor",
+    "Backpack \u00b7 thermal & power systems",
+    "Arm \u00b7 port",
+    "Arm \u00b7 starboard",
+    "Head \u00b7 optical command module",
+    "Auxiliary sensor systems"
+  ]
+}
